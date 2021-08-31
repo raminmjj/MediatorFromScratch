@@ -46,9 +46,9 @@ namespace MediatorFromScratch.DependencyInjection
                 {
                     var genericInterfaceTypes = type.GetInterfaces()
                     .Where(x => x.IsGenericType);
-                    var implementRequestType = genericInterfaceTypes
+                    var implementType = genericInterfaceTypes
                     .Any(x => x.GetGenericTypeDefinition() == typeToMatch);
-                    return !type.IsInterface && !type.IsAbstract && implementRequestType;
+                    return !type.IsInterface && !type.IsAbstract && implementType;
                 });
             return requests.ToList();
         }

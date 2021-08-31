@@ -15,7 +15,7 @@ namespace MediatorFromScratch.Sample
                 .AddMediator(ServiceLifetime.Scoped, typeof(Program))
                 .BuildServiceProvider();
 
-/*            var handlerDetails = new Dictionary<Type, Type>
+            /*var handlerDetails = new Dictionary<Type, Type>
             {
                 {typeof(PrintToConsoleRequest), typeof(PrintToConsoleHandler) }
             };*/

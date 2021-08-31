@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatorFromScratch.Sample"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatorFromScratch", "MediatorFromScratch\MediatorFromScratch.csproj", "{4EE8C767-F7CE-4578-BAEA-46631409E94F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatorFromScratch.DependencyInjection", "MediatorFromScratch.DependencyInjection\MediatorFromScratch.DependencyInjection.csproj", "{6477DCD6-995A-4E2B-B41F-85D24BF7A8FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4EE8C767-F7CE-4578-BAEA-46631409E94F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4EE8C767-F7CE-4578-BAEA-46631409E94F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4EE8C767-F7CE-4578-BAEA-46631409E94F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6477DCD6-995A-4E2B-B41F-85D24BF7A8FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6477DCD6-995A-4E2B-B41F-85D24BF7A8FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6477DCD6-995A-4E2B-B41F-85D24BF7A8FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6477DCD6-995A-4E2B-B41F-85D24BF7A8FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

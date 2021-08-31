@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using MediatorFromScratch.DependencyInjection;
 
 namespace MediatorFromScratch.Sample
 {
@@ -10,26 +11,27 @@ namespace MediatorFromScratch.Sample
         static async Task Main(string[] args)
         {
             var serviceProvider = new ServiceCollection()
-                .AddTransient<PrintToConsoleHandler>()
+                //.AddTransient<PrintToConsoleHandler>()
+                .AddMediator(ServiceLifetime.Scoped, typeof(Program))
                 .BuildServiceProvider();
 
-            var handlerDetails = new Dictionary<Type, Type>
+/*            var handlerDetails = new Dictionary<Type, Type>
             {
                 {typeof(PrintToConsoleRequest), typeof(PrintToConsoleHandler) }
-            };
+            };*/
 
-            // request
+            //IMediator mediator = new Mediator(serviceProvider.GetRequiredService, handlerDetails);
+            var mediator = serviceProvider.GetRequiredService<IMediator>();
+
             var request = new PrintToConsoleRequest
             {
                 Text = "Hello from Mediator"
             };
 
-            // handler
-            IMediator mediator = new Mediator(serviceProvider.GetRequiredService, handlerDetails);
             await mediator.SendAsync(request);
 
-            // mediator
-            // request => mediator => handler => response 
+            var resutlt = await mediator.SendAsync(new GiveMeAValueRequest());
+            Console.WriteLine(resutlt);
         }
     }
 }
